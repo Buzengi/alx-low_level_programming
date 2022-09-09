@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
- * Description:  main - printf function task
+/**
+ * main - printf function task
  *
- * Return Always 0.
+ * Return Always 0
  */
 
 int main(void)
