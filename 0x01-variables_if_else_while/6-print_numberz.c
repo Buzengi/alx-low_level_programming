@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * Main - Entry point
+ * main - Entry point
  * Description: prints numbers base 10 starting from 0 with putchar
  * Return: Always 0 (success)
  */
