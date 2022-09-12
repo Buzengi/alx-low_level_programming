@@ -4,7 +4,7 @@
 
 /**
  * main - entry point
- * Description: Assign a random number to the variable
+ * Descriptio: print a random number to the variable each time executed
  * Return: Always 0 (success)
  */
 
