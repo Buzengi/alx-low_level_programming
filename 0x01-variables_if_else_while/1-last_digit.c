@@ -3,8 +3,8 @@
 #include <time.h>
 
 /**
- * main - entry point
- * Descriptio: print a random number to the variable each time executed
+ * main entry point
+ * Description: assign a random number to the variable, print the last digit
  * Return: Always 0 (success)
  */
 
@@ -28,5 +28,5 @@ int main(void)
 	{
 	printf("Last digit of %d is %d and is 0\n", n, m);
 	}
-	Return(0);
+	return (0);
 }
