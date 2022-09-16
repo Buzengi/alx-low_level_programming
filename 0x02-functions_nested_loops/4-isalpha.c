@@ -7,3 +7,5 @@
  * @c: integer value it gets
  * Return: 1 if true. 0 if false
  */
+
+int _isalpha(c)
