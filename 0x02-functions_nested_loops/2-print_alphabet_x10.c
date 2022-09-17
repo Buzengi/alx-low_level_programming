@@ -12,8 +12,9 @@ void print_alphabet_x10(void)
 
 	while (i < 10)
 	{
-		for (c = 97; c < 123; c++)
+		for (c = 'a'; c <= 'z'; c++)
 			_putchar(c);
+			break;
 	}
 	_putchar('\n');
 	i++;
