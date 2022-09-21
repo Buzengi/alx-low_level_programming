@@ -22,7 +22,7 @@ int main(void)
 			j = k - j;
 			printf(", %ld", k);
 		}
-		i++;
+		++1;
 	}
 	_putchar('\n');
 	return (0);

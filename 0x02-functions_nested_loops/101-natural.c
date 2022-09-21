@@ -1,15 +1,13 @@
-#include <stdio.h>i
+#include <stdio.h>
+#include "main.h"
 
 /**
- * main - entry point
- *Description: Prints the sum of all multiples of 3 or 5 up to 102
- * Retrun: Always 0 (success)
+ * main - Prints the sum of all multiples of 3 or 5 up to 102
+ * Retrun: Always (success)
  */
 
 int main(void)
 {
-	iint i;
-
 	int i, z = 0;
 
 	while (i < 1024)
