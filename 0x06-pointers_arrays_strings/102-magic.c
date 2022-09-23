@@ -1,8 +1,8 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * the program prints a[2] = 98
+ * main - entry point
+ * Return: Alway
  */
 
 int main(void)
