@@ -3,39 +3,80 @@
 #include <stdlib.h>
 
 /**
- * new_dog - creates a new struct of type dog
- * @name: struct parameter name
- * @age: struct parameter age
- * @owner: struct parameter owner
- * Return: returns pointer to buffer of datatype dog
+ * _strlen - returns the lenght of a string
+ * @s: poiter of character
+ * Return: the length of a string
+ */
+
+int _strlen(char *s)
+{
+	int len;
+
+	len = 0;
+	while (*(s + len) != '\0')
+		len++;
+	return (len);
+}
+
+/**
+ * *_strcpy - copies the string pointed
+ * @dest: copie of the string
+ * @src: origin of the string
+ * Return: dest destine copie
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ * Return: dog created
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int nlen, olen, i;
-	dog_t *doggy;
+	dog_t *new_dog;
+	char *cname, *cowner;
 
-	nlen = olen = 0;
-	while (name[nlen++])
-		;
-	while (owner[olen++])
-		;
-	doggy = malloc(sizeof(dog_t));
-	if (doggy == NULL)
+	new_dog = malloc(sizeof(struct dog));
+
+	if (new_dog == NULL)
 		return (NULL);
 
-	doggy->name = malloc(nlen * sizeof(doggy->name));
-	if (doggy == NULL)
-		return (NULL);
-	for (i = 0; i < nlen; i++)
-		doggy->name[i] = name[i];
+	cname = malloc(sizeof(char *) * (_strlen(name) + 1));
 
-	doggy->age = age;
-
-	doggy->owner = malloc(olen * sizeof(doggy->owner));
-	if (doggy == NULL)
+	if (cname == NULL)
+	{
+		free(cname);
+		free(new_dog);
 		return (NULL);
-	for (i = 0; i < olen; i++)
-		doggy->owner[i] = owner[i];
-	return (doggy);
+	}
+
+	cname = _strcpy(cname, name);
+
+	cowner = malloc(sizeof(char *) * (_strlen(owner) + 1));
+	if (cowner == NULL)
+	{
+		free(cowner);
+		free(new_dog);
+		return (NULL);
+	}
+
+	new_dog->name = cname;
+	new_dog->age = age;
+	new_dog->owner = cowner;
+
+	return (new_dog);
 }
