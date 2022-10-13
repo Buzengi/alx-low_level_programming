@@ -1,11 +1,11 @@
 #include "3-calc.h"
 
-/*
+/**
  * get_op_func - selects the correct func to
  * perform operation asked by the user
  * @s: String containing the given pamareter
  * Return: a pointer to the function that corresponds
- * to the operator given as a parameter
+ * to the operator given as a parameteet
  */
 int (*get_op_func(char *s))(int a, int b)
 {
